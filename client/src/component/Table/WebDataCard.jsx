@@ -6,7 +6,6 @@ const WebDataCard = ({ handleDelete, dataArray }) => {
 
     return (
         <>
-            <Text>{dataArray}</Text>
             {
                 dataArray?.map((data, i) => {
                     return <Stack w={'100%'} p="4" boxShadow="md" m="4" borderRadius="sm" key={i}>

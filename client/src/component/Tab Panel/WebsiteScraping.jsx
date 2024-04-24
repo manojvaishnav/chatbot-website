@@ -199,7 +199,7 @@ const WebsiteScraping = () => {
                               Submit Scan Request
                             </Button>
                             {
-                              webData ? <>
+                              webData!==null ? <>
                                 <Button
                                   bg="red.400"
                                   color="white"
