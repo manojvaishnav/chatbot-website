@@ -1,0 +1,1094 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "autoSave": false,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "yo": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hii": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "greeting.morning",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "greeting.afternoon",
+            "domain": "default"
+          },
+          "even,good": {
+            "intent": "greeting.evening",
+            "domain": "default"
+          },
+          "bye,thank": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "thank": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "ok": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "done": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "see,soon,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "thank,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "thanx": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "process,registr": {
+            "intent": "registration_process",
+            "domain": "default"
+          },
+          "login,process": {
+            "intent": "login_process",
+            "domain": "default"
+          },
+          "forgot,password": {
+            "intent": "forgot_password",
+            "domain": "default"
+          },
+          "our,servic": {
+            "intent": "our_service",
+            "domain": "default"
+          },
+          "are,who,you": {
+            "intent": "who_are_you",
+            "domain": "default"
+          },
+          "instal,process": {
+            "intent": "installation_process",
+            "domain": "default"
+          },
+          "train": {
+            "intent": "training",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings": "default",
+          "greeting.morning": "default",
+          "greeting.afternoon": "default",
+          "greeting.evening": "default",
+          "greetings.bye": "default",
+          "registration_process": "default",
+          "login_process": "default",
+          "forgot_password": "default",
+          "our_service": "default",
+          "who_are_you": "default",
+          "installation_process": "default",
+          "training": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "yo",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "hii",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "good morning",
+            "intent": "greeting.morning"
+          },
+          {
+            "domain": "default",
+            "utterance": "good afternoon",
+            "intent": "greeting.afternoon"
+          },
+          {
+            "domain": "default",
+            "utterance": "good evening",
+            "intent": "greeting.evening"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye thanks",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "thanks",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "done",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye bye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you soon",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "thank you",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "thanx",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "Registration Process",
+            "intent": "registration_process"
+          },
+          {
+            "domain": "default",
+            "utterance": "Login Process",
+            "intent": "login_process"
+          },
+          {
+            "domain": "default",
+            "utterance": "Forgot Password",
+            "intent": "forgot_password"
+          },
+          {
+            "domain": "default",
+            "utterance": "Our Service",
+            "intent": "our_service"
+          },
+          {
+            "domain": "default",
+            "utterance": "Who are you",
+            "intent": "who_are_you"
+          },
+          {
+            "domain": "default",
+            "utterance": "Installation process",
+            "intent": "installation_process"
+          },
+          {
+            "domain": "default",
+            "utterance": "training",
+            "intent": "training"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hey": 1,
+              "yo": 1,
+              "hii": 1,
+              "good": 1,
+              "morn": 1,
+              "afternoon": 1,
+              "even": 1,
+              "bye": 1,
+              "thank": 1,
+              "ok": 1,
+              "done": 1,
+              "see": 1,
+              "you": 1,
+              "soon": 1,
+              "thanx": 1,
+              "registr": 1,
+              "process": 1,
+              "login": 1,
+              "forgot": 1,
+              "password": 1,
+              "our": 1,
+              "servic": 1,
+              "who": 1,
+              "are": 1,
+              "instal": 1,
+              "train": 1
+            },
+            "intents": {
+              "greetings": 1,
+              "greeting.morning": 1,
+              "greeting.afternoon": 1,
+              "greeting.evening": 1,
+              "greetings.bye": 1,
+              "registration_process": 1,
+              "login_process": 1,
+              "forgot_password": 1,
+              "our_service": 1,
+              "who_are_you": 1,
+              "installation_process": 1,
+              "training": 1
+            },
+            "intentFeatures": {
+              "greetings": {
+                "hello": 1,
+                "hey": 1,
+                "yo": 1,
+                "hii": 1
+              },
+              "greeting.morning": {
+                "good": 1,
+                "morn": 1
+              },
+              "greeting.afternoon": {
+                "good": 1,
+                "afternoon": 1
+              },
+              "greeting.evening": {
+                "good": 1,
+                "even": 1
+              },
+              "greetings.bye": {
+                "bye": 1,
+                "thank": 1,
+                "ok": 1,
+                "done": 1,
+                "see": 1,
+                "you": 1,
+                "soon": 1,
+                "thanx": 1
+              },
+              "registration_process": {
+                "registr": 1,
+                "process": 1
+              },
+              "login_process": {
+                "login": 1,
+                "process": 1
+              },
+              "forgot_password": {
+                "forgot": 1,
+                "password": 1
+              },
+              "our_service": {
+                "our": 1,
+                "servic": 1
+              },
+              "who_are_you": {
+                "who": 1,
+                "are": 1,
+                "you": 1
+              },
+              "installation_process": {
+                "instal": 1,
+                "process": 1
+              },
+              "training": {
+                "train": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greetings"
+              ],
+              "hey": [
+                "greetings"
+              ],
+              "yo": [
+                "greetings"
+              ],
+              "hii": [
+                "greetings"
+              ],
+              "good": [
+                "greeting.morning",
+                "greeting.afternoon",
+                "greeting.evening"
+              ],
+              "morn": [
+                "greeting.morning"
+              ],
+              "afternoon": [
+                "greeting.afternoon"
+              ],
+              "even": [
+                "greeting.evening"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "thank": [
+                "greetings.bye"
+              ],
+              "ok": [
+                "greetings.bye"
+              ],
+              "done": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye",
+                "who_are_you"
+              ],
+              "soon": [
+                "greetings.bye"
+              ],
+              "thanx": [
+                "greetings.bye"
+              ],
+              "registr": [
+                "registration_process"
+              ],
+              "process": [
+                "registration_process",
+                "login_process",
+                "installation_process"
+              ],
+              "login": [
+                "login_process"
+              ],
+              "forgot": [
+                "forgot_password"
+              ],
+              "password": [
+                "forgot_password"
+              ],
+              "our": [
+                "our_service"
+              ],
+              "servic": [
+                "our_service"
+              ],
+              "who": [
+                "who_are_you"
+              ],
+              "are": [
+                "who_are_you"
+              ],
+              "instal": [
+                "installation_process"
+              ],
+              "train": [
+                "training"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hey",
+                "yo",
+                "hii",
+                "good",
+                "morn",
+                "afternoon",
+                "even",
+                "bye",
+                "thank",
+                "ok",
+                "done",
+                "see",
+                "you",
+                "soon",
+                "thanx",
+                "registr",
+                "process",
+                "login",
+                "forgot",
+                "password",
+                "our",
+                "servic",
+                "who",
+                "are",
+                "instal",
+                "train"
+              ],
+              "intents": [
+                "greetings",
+                "greeting.morning",
+                "greeting.afternoon",
+                "greeting.evening",
+                "greetings.bye",
+                "registration_process",
+                "login_process",
+                "forgot_password",
+                "our_service",
+                "who_are_you",
+                "installation_process",
+                "training"
+              ],
+              "perceptrons": [
+                [
+                  10.4309663772583,
+                  10.430964469909668,
+                  10.430963516235352,
+                  10.430963516235352,
+                  -2.963651418685913,
+                  -1.0296446084976196,
+                  -0.9799808263778687,
+                  -0.9458961486816406,
+                  -3.8548872470855713,
+                  -3.854794502258301,
+                  -3.854746103286743,
+                  -3.854746103286743,
+                  -0.8934847712516785,
+                  -2.1004061698913574,
+                  -0.8934847712516785,
+                  -3.854746103286743,
+                  -0.9896207451820374,
+                  -2.9056427478790283,
+                  -0.9654908776283264,
+                  -1.9273734092712402,
+                  -1.9273734092712402,
+                  -1.9273734092712402,
+                  -1.9273734092712402,
+                  -0.8771705031394958,
+                  -0.8771705031394958,
+                  -0.9491044282913208,
+                  -3.854745864868164,
+                  3.854747494151307
+                ],
+                [
+                  -0.2241663932800293,
+                  -0.2241663783788681,
+                  -0.2241663783788681,
+                  -0.2241663783788681,
+                  3.4033048152923584,
+                  10.658239364624023,
+                  -3.627469778060913,
+                  -3.627469778060913,
+                  -0.29606032371520996,
+                  -0.2787673771381378,
+                  -0.22833698987960815,
+                  -0.22618772089481354,
+                  -0.0849037617444992,
+                  -0.20043766498565674,
+                  -0.0849037617444992,
+                  -0.22432880103588104,
+                  -0.08266788721084595,
+                  -0.23918505012989044,
+                  -0.0790189653635025,
+                  -0.13267332315444946,
+                  -0.13267332315444946,
+                  -0.13002100586891174,
+                  -0.13002100586891174,
+                  -0.05488375574350357,
+                  -0.05488375574350357,
+                  -0.060845278203487396,
+                  -0.22416695952415466,
+                  0.22416649039349
+                ],
+                [
+                  -0.20841820538043976,
+                  -0.2069215476512909,
+                  -0.2060423344373703,
+                  -0.2056567221879959,
+                  3.417341947555542,
+                  -3.6227893829345703,
+                  10.662919998168945,
+                  -3.6227893829345703,
+                  -0.3260861039161682,
+                  -0.3068556785583496,
+                  -0.23570574820041656,
+                  -0.23013415932655334,
+                  -0.08728764951229095,
+                  -0.22314442694187164,
+                  -0.08728764951229095,
+                  -0.22114557027816772,
+                  -0.09278816729784012,
+                  -0.26605424284935,
+                  -0.08354438096284866,
+                  -0.14249958097934723,
+                  -0.14249958097934723,
+                  -0.13920177519321442,
+                  -0.13920177519321442,
+                  -0.06170978769659996,
+                  -0.06170978769659996,
+                  -0.0678410530090332,
+                  -0.210593581199646,
+                  0.2054490693350107
+                ],
+                [
+                  -0.2083858847618103,
+                  -0.20394259691238403,
+                  -0.20057843625545502,
+                  -0.19658410549163818,
+                  3.4621856212615967,
+                  -3.6078433990478516,
+                  -3.6078433990478516,
+                  10.677865982055664,
+                  -0.36194995045661926,
+                  -0.3406096398830414,
+                  -0.24892888963222504,
+                  -0.24208027124404907,
+                  -0.09732811152935028,
+                  -0.2490445226430893,
+                  -0.09732811152935028,
+                  -0.22861772775650024,
+                  -0.10325317829847336,
+                  -0.29346829652786255,
+                  -0.0929584801197052,
+                  -0.15107885003089905,
+                  -0.15107885003089905,
+                  -0.15245981514453888,
+                  -0.15245981514453888,
+                  -0.06862986832857132,
+                  -0.06862986832857132,
+                  -0.0711885318160057,
+                  -0.21217717230319977,
+                  0.1456594688857168
+                ],
+                [
+                  -8.486209869384766,
+                  -8.480325698852539,
+                  -8.474432945251465,
+                  -8.468534469604492,
+                  -6.441006183624268,
+                  -2.1494839191436768,
+                  -2.14513897895813,
+                  -2.1407876014709473,
+                  4.561145305633545,
+                  3.5310022830963135,
+                  5.832927703857422,
+                  5.838863372802734,
+                  1.8000876903533936,
+                  2.088900089263916,
+                  1.8000876903533936,
+                  5.76442813873291,
+                  -2.164181709289551,
+                  -6.477563858032227,
+                  -2.1598949432373047,
+                  -4.298686981201172,
+                  -4.298686981201172,
+                  -4.297277927398682,
+                  -4.297277927398682,
+                  -5.353756427764893,
+                  -5.353756427764893,
+                  -2.14796781539917,
+                  -8.503519058227539,
+                  8.654371751051578
+                ],
+                [
+                  -0.22090615332126617,
+                  -0.22077253460884094,
+                  -0.22075022757053375,
+                  -0.220747709274292,
+                  -0.22546623647212982,
+                  -0.07620514184236526,
+                  -0.0684700608253479,
+                  -0.06430316716432571,
+                  -0.22820475697517395,
+                  -0.22077009081840515,
+                  -0.2207476943731308,
+                  -0.2207476943731308,
+                  -0.04066697880625725,
+                  -0.1971307247877121,
+                  -0.04066697880625725,
+                  -0.2207476943731308,
+                  10.65909481048584,
+                  3.4058680534362793,
+                  -3.6266143321990967,
+                  -0.19106608629226685,
+                  -0.19106608629226685,
+                  -0.19230884313583374,
+                  -0.19230884313583374,
+                  -0.12107706815004349,
+                  -0.12107706815004349,
+                  -3.6266143321990967,
+                  -0.22150158882141113,
+                  0.22074780638881697
+                ],
+                [
+                  -0.22138157486915588,
+                  -0.21759413182735443,
+                  -0.21413540840148926,
+                  -0.21136389672756195,
+                  -0.2518962323665619,
+                  -0.08587294816970825,
+                  -0.0771491602063179,
+                  -0.06873666495084763,
+                  -0.24694764614105225,
+                  -0.22799935936927795,
+                  -0.20610468089580536,
+                  -0.20511087775230408,
+                  -0.04645492881536484,
+                  -0.21968196332454681,
+                  -0.04645492881536484,
+                  -0.20442506670951843,
+                  -3.6224985122680664,
+                  3.418220043182373,
+                  10.66321086883545,
+                  -0.2087032049894333,
+                  -0.2087032049894333,
+                  -0.2032959759235382,
+                  -0.2032959759235382,
+                  -0.1330191195011139,
+                  -0.1330191195011139,
+                  -3.6224985122680664,
+                  -0.2255394607782364,
+                  0.2042801030157508
+                ],
+                [
+                  -0.4687315821647644,
+                  -0.4637875258922577,
+                  -0.45954281091690063,
+                  -0.4562259018421173,
+                  -0.4459882378578186,
+                  -0.1576153039932251,
+                  -0.14343267679214478,
+                  -0.13292275369167328,
+                  -0.4885618984699249,
+                  -0.4639275074005127,
+                  -0.45140889286994934,
+                  -0.4506177604198456,
+                  -0.10181349515914917,
+                  -0.3400099575519562,
+                  -0.10181349515914917,
+                  -0.4504238963127136,
+                  -0.09664958715438843,
+                  -0.4255219101905823,
+                  -0.0875687375664711,
+                  6.91764497756958,
+                  6.91764497756958,
+                  -0.31121253967285156,
+                  -0.31121253967285156,
+                  -0.19170378148555756,
+                  -0.19170378148555756,
+                  -0.22803997993469238,
+                  -0.47426673769950867,
+                  0.450424099975153
+                ],
+                [
+                  -0.4732290804386139,
+                  -0.46825477480888367,
+                  -0.46399471163749695,
+                  -0.46065568923950195,
+                  -0.4534265697002411,
+                  -0.1566612869501114,
+                  -0.14678898453712463,
+                  -0.13288220763206482,
+                  -0.4936271607875824,
+                  -0.4690437316894531,
+                  -0.45579537749290466,
+                  -0.45499762892723083,
+                  -0.10174666345119476,
+                  -0.3464289903640747,
+                  -0.10174666345119476,
+                  -0.4548031687736511,
+                  -0.0984203889966011,
+                  -0.4324008822441101,
+                  -0.0874895378947258,
+                  -0.24162015318870544,
+                  -0.24162015318870544,
+                  6.915455341339111,
+                  6.915455341339111,
+                  -0.1966087371110916,
+                  -0.1966087371110916,
+                  -0.23342040181159973,
+                  -0.4788450002670288,
+                  0.4548033691338089
+                ],
+                [
+                  -0.20717890560626984,
+                  -0.20073474943637848,
+                  -0.19447748363018036,
+                  -0.18840236961841583,
+                  -0.2818991541862488,
+                  -0.09137678146362305,
+                  -0.08194515109062195,
+                  -0.0727052167057991,
+                  -0.21546931564807892,
+                  -2.3833930492401123,
+                  -0.17038625478744507,
+                  -0.1693635880947113,
+                  -1.3054527044296265,
+                  2.3883180618286133,
+                  -1.3054527044296265,
+                  -0.07987598329782486,
+                  -0.02513602189719677,
+                  -0.20897707343101501,
+                  -0.020668281242251396,
+                  -0.05529963597655296,
+                  -0.05529963597655296,
+                  -0.057166606187820435,
+                  -0.057166606187820435,
+                  5.9511590003967285,
+                  5.9511590003967285,
+                  -0.1452316790819168,
+                  -0.20775146782398224,
+                  -0.0049233668259992215
+                ],
+                [
+                  -0.26558271050453186,
+                  -0.25880369544029236,
+                  -0.2544402480125427,
+                  -0.2484007328748703,
+                  -0.3228309452533722,
+                  -0.11004962027072906,
+                  -0.09885817021131516,
+                  -0.08806804567575455,
+                  -0.3075803220272064,
+                  -0.28931155800819397,
+                  -0.23505724966526031,
+                  -0.23115402460098267,
+                  -0.09476204216480255,
+                  -0.1719239056110382,
+                  -0.09476204216480255,
+                  -0.22188735008239746,
+                  -3.6115598678588867,
+                  3.4510369300842285,
+                  -3.6115598678588867,
+                  -0.08026222139596939,
+                  -0.08026222139596939,
+                  -0.08026222139596939,
+                  -0.08026222139596939,
+                  -0.018693719059228897,
+                  -0.018693719059228897,
+                  10.674149513244629,
+                  -0.26987534761428833,
+                  0.1605245976163386
+                ],
+                [
+                  -0.9640718698501587,
+                  -0.9640111327171326,
+                  -0.9639997482299805,
+                  -0.9639995098114014,
+                  -0.7263451218605042,
+                  -0.247375026345253,
+                  -0.24029220640659332,
+                  -0.23804910480976105,
+                  -0.9639994502067566,
+                  -0.9639995098114014,
+                  -0.9639995098114014,
+                  -0.9639995098114014,
+                  -0.2221539318561554,
+                  -0.5196933150291443,
+                  -0.2221539318561554,
+                  -0.9639994502067566,
+                  -0.24277395009994507,
+                  -0.7237358689308167,
+                  -0.24062436819076538,
+                  -0.48199981451034546,
+                  -0.48199981451034546,
+                  -0.48199981451034546,
+                  -0.48199981451034546,
+                  -0.2221532016992569,
+                  -0.2221532016992569,
+                  -0.24026384949684143,
+                  13.321710586547852,
+                  0.9639999511771231
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "yo"
+      ],
+      [
+        "en",
+        "hii"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "good evening"
+      ],
+      [
+        "en",
+        "bye thanks"
+      ],
+      [
+        "en",
+        "thanks"
+      ],
+      [
+        "en",
+        "ok"
+      ],
+      [
+        "en",
+        "done"
+      ],
+      [
+        "en",
+        "bye bye"
+      ],
+      [
+        "en",
+        "see you soon"
+      ],
+      [
+        "en",
+        "thank you"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "thanx"
+      ],
+      [
+        "en",
+        "Registration Process"
+      ],
+      [
+        "en",
+        "Login Process"
+      ],
+      [
+        "en",
+        "Forgot Password"
+      ],
+      [
+        "en",
+        "Our Service"
+      ],
+      [
+        "en",
+        "Who are you"
+      ],
+      [
+        "en",
+        "Installation process"
+      ],
+      [
+        "en",
+        "training"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings": [
+          {
+            "answer": "Hello! How can I assist you today?"
+          },
+          {
+            "answer": "Hey there! I'm just a chatbot, but I'm here to help you with any questions you have."
+          },
+          {
+            "answer": "Hi there! What can I help you with?"
+          },
+          {
+            "answer": "Greetings! How may I be of service?"
+          }
+        ],
+        "greeting.morning": [
+          {
+            "answer": "Good morning! What brings you here?"
+          }
+        ],
+        "greeting.afternoon": [
+          {
+            "answer": "Good afternoon! What brings you here?"
+          }
+        ],
+        "greeting.evening": [
+          {
+            "answer": "Good evening! What brings you here?"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "I hope I was able to assist you! Feel free to reach out if you have any more questions."
+          },
+          {
+            "answer": "It was a pleasure helping you! If you need anything else, just let me know."
+          },
+          {
+            "answer": "Your satisfaction is important to me. Don't hesitate to contact me again if you need further assistance."
+          },
+          {
+            "answer": "Thanks for chatting! Wishing you a wonderful day!"
+          },
+          {
+            "answer": "I'm here whenever you need me. Until next time, take care!"
+          },
+          {
+            "answer": "I appreciate you choosing to chat with me. Have a fantastic day ahead!"
+          },
+          {
+            "answer": "Goodbye for now! Remember, I'm just a message away if you need help in the future."
+          },
+          {
+            "answer": "Thanks for your time! If you have any more questions, don't hesitate to ask."
+          },
+          {
+            "answer": "Signing off for now. If you ever need assistance again, don't hesitate to reach out. Goodbye!"
+          }
+        ],
+        "registration_process": [
+          {
+            "answer": "For registration you need to follow these steps:-\r\n1. Click on Sign-Up button\r\n2. Fill the registration form with email and password\r\n3. Click on SignUp. "
+          }
+        ],
+        "login_process": [
+          {
+            "answer": "For login you need to follow these steps:-\r\n1. Click on Sign-In button\r\n2. Fill the registration form with email and password\r\n3. Click on Signin. "
+          }
+        ],
+        "forgot_password": [
+          {
+            "answer": "Sorry, but right now there is no Forgot-Password option, but in future it will be."
+          }
+        ],
+        "our_service": [
+          {
+            "answer": "we are providing you to service to make your own chatbot free. You just need to add Question-Answer to prepare your chatbot."
+          }
+        ],
+        "who_are_you": [
+          {
+            "answer": "We are BOT-CREATOR, We providing you to service to build chatbot for your business, organization etc.\r\nAnd It's free."
+          }
+        ],
+        "installation_process": [
+          {
+            "answer": "To intigrate chatbot on your website, you just need to follow these step:-\r\n1. Click on Installation Code after login.\r\n2. Copy the head tag code and paste it into your html \"<head>\" tag before closing tag \"</head>\".\r\n3. Copy the body tag code and paste it into your html \"<body>\" tag before closing tag \"</body>\"\r\n4. Congrats. Chatbot is successfully intigrate with you website."
+          }
+        ],
+        "training": [
+          {
+            "answer": "It is easy to tain the chatbot you just need to add question and answer, the chatbot automatically train with this data. If you have many questions, then you can upoad that, for uploading the data you just need to download sample excel file from \"Upload\". Add data in that file and upload the file."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
