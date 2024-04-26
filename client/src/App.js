@@ -21,7 +21,7 @@ const App = () => {
       const formdata = new FormData()
       formdata.append('token', user.token)
 
-      const { data } = await axios.post('https://chatbot-website.onrender.com/api/v1/auth/verify-token', formdata)
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/auth/verify-token`, formdata)
 
       if (data.success && data.login) {
         localStorage.setItem('isLoginVerified', true)

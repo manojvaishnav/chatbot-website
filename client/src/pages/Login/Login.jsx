@@ -47,7 +47,7 @@ const Login = () => {
       formdata.append('email', email)
       formdata.append('password', password)
 
-      const { data } = await axios.post(`https://chatbot-website.onrender.com/api/v1/auth/login`, formdata)
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/auth/login`, formdata)
 
       toast({
         title: 'Login successfull',

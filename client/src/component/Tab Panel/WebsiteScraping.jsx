@@ -42,7 +42,7 @@ const WebsiteScraping = () => {
       const formdata = new FormData()
       formdata.append('url', website)
 
-      const { data } = await axios.post('https://chatbot-website.onrender.com/api/v1/website', formdata, {
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/website`, formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -72,7 +72,7 @@ const WebsiteScraping = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
 
-      const { data } = await axios.get('https://chatbot-website.onrender.com/api/v1/website', {
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/website`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -97,7 +97,7 @@ const WebsiteScraping = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
 
-      await axios.delete(`https://chatbot-website.onrender.com/api/v1/website/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/v1/website/${id}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -126,7 +126,7 @@ const WebsiteScraping = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
 
-      await axios.delete(`https://chatbot-website.onrender.com/api/v1/website/`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/v1/website/`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

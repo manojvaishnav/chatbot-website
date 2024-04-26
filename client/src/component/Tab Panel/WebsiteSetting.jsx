@@ -48,7 +48,7 @@ const WebsiteSetting = () => {
       formdata.append('description', desc)
       formdata.append('website', website)
 
-      await axios.post('https://chatbot-website.onrender.com/api/v1/company', formdata, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/company`, formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -80,7 +80,7 @@ const WebsiteSetting = () => {
     if (user) {
       try {
 
-        const { data } = await axios.get('https://chatbot-website.onrender.com/api/v1/company', {
+        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/company`, {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }
@@ -124,7 +124,7 @@ const WebsiteSetting = () => {
       formdata.append('description', desc)
       formdata.append('website', website)
 
-      await axios.put(`https://chatbot-website.onrender.com/api/v1/company/${id}`, formdata, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/api/v1/company/${id}`, formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

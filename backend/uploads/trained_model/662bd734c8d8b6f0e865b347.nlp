@@ -1,0 +1,719 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "autoSave": false,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "yo": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hii": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "greeting.morning",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "greeting.afternoon",
+            "domain": "default"
+          },
+          "even,good": {
+            "intent": "greeting.evening",
+            "domain": "default"
+          },
+          "bye,thank": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "thank": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "ok": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "done": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "see,soon,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "thank,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "thanx": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "new,user": {
+            "intent": "new_user",
+            "domain": "default"
+          },
+          "question": {
+            "intent": "question",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings": "default",
+          "greeting.morning": "default",
+          "greeting.afternoon": "default",
+          "greeting.evening": "default",
+          "greetings.bye": "default",
+          "new_user": "default",
+          "question": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "yo",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "hii",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "good morning",
+            "intent": "greeting.morning"
+          },
+          {
+            "domain": "default",
+            "utterance": "good afternoon",
+            "intent": "greeting.afternoon"
+          },
+          {
+            "domain": "default",
+            "utterance": "good evening",
+            "intent": "greeting.evening"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye thanks",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "thanks",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "ok",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "done",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye bye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you soon",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "thank you",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "thanx",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "new user",
+            "intent": "new_user"
+          },
+          {
+            "domain": "default",
+            "utterance": "question",
+            "intent": "question"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hey": 1,
+              "yo": 1,
+              "hii": 1,
+              "good": 1,
+              "morn": 1,
+              "afternoon": 1,
+              "even": 1,
+              "bye": 1,
+              "thank": 1,
+              "ok": 1,
+              "done": 1,
+              "see": 1,
+              "you": 1,
+              "soon": 1,
+              "thanx": 1,
+              "new": 1,
+              "user": 1,
+              "question": 1
+            },
+            "intents": {
+              "greetings": 1,
+              "greeting.morning": 1,
+              "greeting.afternoon": 1,
+              "greeting.evening": 1,
+              "greetings.bye": 1,
+              "new_user": 1,
+              "question": 1
+            },
+            "intentFeatures": {
+              "greetings": {
+                "hello": 1,
+                "hey": 1,
+                "yo": 1,
+                "hii": 1
+              },
+              "greeting.morning": {
+                "good": 1,
+                "morn": 1
+              },
+              "greeting.afternoon": {
+                "good": 1,
+                "afternoon": 1
+              },
+              "greeting.evening": {
+                "good": 1,
+                "even": 1
+              },
+              "greetings.bye": {
+                "bye": 1,
+                "thank": 1,
+                "ok": 1,
+                "done": 1,
+                "see": 1,
+                "you": 1,
+                "soon": 1,
+                "thanx": 1
+              },
+              "new_user": {
+                "new": 1,
+                "user": 1
+              },
+              "question": {
+                "question": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greetings"
+              ],
+              "hey": [
+                "greetings"
+              ],
+              "yo": [
+                "greetings"
+              ],
+              "hii": [
+                "greetings"
+              ],
+              "good": [
+                "greeting.morning",
+                "greeting.afternoon",
+                "greeting.evening"
+              ],
+              "morn": [
+                "greeting.morning"
+              ],
+              "afternoon": [
+                "greeting.afternoon"
+              ],
+              "even": [
+                "greeting.evening"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "thank": [
+                "greetings.bye"
+              ],
+              "ok": [
+                "greetings.bye"
+              ],
+              "done": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye"
+              ],
+              "soon": [
+                "greetings.bye"
+              ],
+              "thanx": [
+                "greetings.bye"
+              ],
+              "new": [
+                "new_user"
+              ],
+              "user": [
+                "new_user"
+              ],
+              "question": [
+                "question"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hey",
+                "yo",
+                "hii",
+                "good",
+                "morn",
+                "afternoon",
+                "even",
+                "bye",
+                "thank",
+                "ok",
+                "done",
+                "see",
+                "you",
+                "soon",
+                "thanx",
+                "new",
+                "user",
+                "question"
+              ],
+              "intents": [
+                "greetings",
+                "greeting.morning",
+                "greeting.afternoon",
+                "greeting.evening",
+                "greetings.bye",
+                "new_user",
+                "question"
+              ],
+              "perceptrons": [
+                [
+                  10.02498722076416,
+                  10.024985313415527,
+                  10.024984359741211,
+                  10.024984359741211,
+                  -3.2936646938323975,
+                  -1.1451865434646606,
+                  -1.086918592453003,
+                  -1.0442497730255127,
+                  -4.260870456695557,
+                  -4.260795593261719,
+                  -4.260724067687988,
+                  -4.260722637176514,
+                  -1.2672102451324463,
+                  -1.726533055305481,
+                  -1.2672102451324463,
+                  -4.260722637176514,
+                  -2.130362033843994,
+                  -2.130362033843994,
+                  -4.260722637176514,
+                  4.260725583282648
+                ],
+                [
+                  -0.2551456093788147,
+                  -0.2551455795764923,
+                  -0.2551455795764923,
+                  -0.2551455497741699,
+                  3.380070209503174,
+                  10.650494575500488,
+                  -3.6352145671844482,
+                  -3.6352145671844482,
+                  -0.32977059483528137,
+                  -0.3133578896522522,
+                  -0.25852659344673157,
+                  -0.2564055323600769,
+                  -0.10314137488603592,
+                  -0.1702060103416443,
+                  -0.10314137488603592,
+                  -0.25518712401390076,
+                  -0.15192019939422607,
+                  -0.15192019939422607,
+                  -0.2551467716693878,
+                  0.25514577930344384
+                ],
+                [
+                  -0.24393616616725922,
+                  -0.2421950101852417,
+                  -0.24120460450649261,
+                  -0.240790456533432,
+                  3.3909778594970703,
+                  -3.631577491760254,
+                  10.654131889343262,
+                  -3.631577491760254,
+                  -0.366109699010849,
+                  -0.348405659198761,
+                  -0.2662760317325592,
+                  -0.26183226704597473,
+                  -0.11583620309829712,
+                  -0.19138702750205994,
+                  -0.11583620309829712,
+                  -0.2516624927520752,
+                  -0.1637147068977356,
+                  -0.1637147068977356,
+                  -0.2464998960494995,
+                  0.2406012666034095
+                ],
+                [
+                  -0.2480553686618805,
+                  -0.24283456802368164,
+                  -0.23895011842250824,
+                  -0.23516079783439636,
+                  3.4317612648010254,
+                  -3.617983818054199,
+                  -3.617983818054199,
+                  10.667725563049316,
+                  -0.40110552310943604,
+                  -0.3828394412994385,
+                  -0.28378063440322876,
+                  -0.2764904499053955,
+                  -0.12894649803638458,
+                  -0.2133955955505371,
+                  -0.12894649803638458,
+                  -0.2608626186847687,
+                  -0.1737653613090515,
+                  -0.1737653613090515,
+                  -0.25255846977233887,
+                  0.1862242393708416
+                ],
+                [
+                  -10.349966049194336,
+                  -10.345941543579102,
+                  -10.341910362243652,
+                  -10.337873458862305,
+                  -7.821183681488037,
+                  -2.6087582111358643,
+                  -2.6057934761047363,
+                  -2.6028237342834473,
+                  3.0966832637786865,
+                  2.3598814010620117,
+                  3.957028388977051,
+                  3.9610843658447266,
+                  1.1844477653503418,
+                  1.4831938743591309,
+                  1.1844477653503418,
+                  3.9179580211639404,
+                  -5.213821887969971,
+                  -5.213821887969971,
+                  -10.361784934997559,
+                  10.476281423713287
+                ],
+                [
+                  -0.5337215662002563,
+                  -0.5281906723976135,
+                  -0.5236561298370361,
+                  -0.5197818875312805,
+                  -0.5190960168838501,
+                  -0.17999300360679626,
+                  -0.16803857684135437,
+                  -0.15209649503231049,
+                  -0.5578873157501221,
+                  -0.5352861881256104,
+                  -0.5142320394515991,
+                  -0.5132775902748108,
+                  -0.1759677529335022,
+                  -0.25988805294036865,
+                  -0.1759677529335022,
+                  -0.5130131244659424,
+                  6.886350154876709,
+                  6.886350154876709,
+                  -0.5409144163131714,
+                  0.5130135568781055
+                ],
+                [
+                  -1.0655598640441895,
+                  -1.0654910802841187,
+                  -1.0654782056808472,
+                  -1.0654767751693726,
+                  -0.8038122057914734,
+                  -0.27527639269828796,
+                  -0.26541903614997864,
+                  -0.26217952370643616,
+                  -1.0654760599136353,
+                  -1.065476417541504,
+                  -1.0654760599136353,
+                  -1.0654759407043457,
+                  -0.31955835223197937,
+                  -0.4263598620891571,
+                  -0.31955835223197937,
+                  -1.0654759407043457,
+                  -0.5327381491661072,
+                  -0.5327381491661072,
+                  13.220232963562012,
+                  1.0654768100385228
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "yo"
+      ],
+      [
+        "en",
+        "hii"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "good evening"
+      ],
+      [
+        "en",
+        "bye thanks"
+      ],
+      [
+        "en",
+        "thanks"
+      ],
+      [
+        "en",
+        "ok"
+      ],
+      [
+        "en",
+        "done"
+      ],
+      [
+        "en",
+        "bye bye"
+      ],
+      [
+        "en",
+        "see you soon"
+      ],
+      [
+        "en",
+        "thank you"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "thanx"
+      ],
+      [
+        "en",
+        "new user"
+      ],
+      [
+        "en",
+        "question"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greetings": [
+          {
+            "answer": "Hello! How can I assist you today?"
+          },
+          {
+            "answer": "Hey there! I'm just a chatbot, but I'm here to help you with any questions you have."
+          },
+          {
+            "answer": "Hi there! What can I help you with?"
+          },
+          {
+            "answer": "Greetings! How may I be of service?"
+          }
+        ],
+        "greeting.morning": [
+          {
+            "answer": "Good morning! What brings you here?"
+          }
+        ],
+        "greeting.afternoon": [
+          {
+            "answer": "Good afternoon! What brings you here?"
+          }
+        ],
+        "greeting.evening": [
+          {
+            "answer": "Good evening! What brings you here?"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "I hope I was able to assist you! Feel free to reach out if you have any more questions."
+          },
+          {
+            "answer": "It was a pleasure helping you! If you need anything else, just let me know."
+          },
+          {
+            "answer": "Your satisfaction is important to me. Don't hesitate to contact me again if you need further assistance."
+          },
+          {
+            "answer": "Thanks for chatting! Wishing you a wonderful day!"
+          },
+          {
+            "answer": "I'm here whenever you need me. Until next time, take care!"
+          },
+          {
+            "answer": "I appreciate you choosing to chat with me. Have a fantastic day ahead!"
+          },
+          {
+            "answer": "Goodbye for now! Remember, I'm just a message away if you need help in the future."
+          },
+          {
+            "answer": "Thanks for your time! If you have any more questions, don't hesitate to ask."
+          },
+          {
+            "answer": "Signing off for now. If you ever need assistance again, don't hesitate to reach out. Goodbye!"
+          }
+        ],
+        "new_user": [
+          {
+            "answer": "You need  to register first"
+          }
+        ],
+        "question": [
+          {
+            "answer": "new question"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

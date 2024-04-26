@@ -28,7 +28,7 @@ const QAModel = ({ isOpen, onClose, getAllQA }) => {
             formdata.append('question', question)
             formdata.append('answer', answer)
 
-            await axios.put(`https://chatbot-website.onrender.com/api/v1/chatbot/question/${dataId}`, formdata, {
+            await axios.put(`${process.env.REACT_APP_API_URL}/api/v1/chatbot/question/${dataId}`, formdata, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

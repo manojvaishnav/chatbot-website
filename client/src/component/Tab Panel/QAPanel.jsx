@@ -13,7 +13,7 @@ const QAPanel = () => {
   const getAllQA = async () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
-      const { data } = await axios.get('https://chatbot-website.onrender.com/api/v1/chatbot/question', {
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/chatbot/question`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -37,7 +37,7 @@ const QAPanel = () => {
       const formdata = new FormData()
       formdata.append('id', id)
 
-      await axios.post('https://chatbot-website.onrender.com/api/v1/chatbot/question', formdata, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/chatbot/question`, formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

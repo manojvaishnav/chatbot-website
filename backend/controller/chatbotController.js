@@ -29,7 +29,7 @@ module.exports.chatWithBot = async (req, res) => {
         const response = await manager.process('en', question);
 
         if (!response.answer) {
-            if (isChatbotExists.websiteData !== null) {
+            if (isChatbotExists.websiteData !== null && isChatbotExists.websiteData.length > 0) {
                 const combinedString = isChatbotExists.websiteData.join("\n\n");
                 const response = await getAnswerFromQA(question, combinedString)
 
