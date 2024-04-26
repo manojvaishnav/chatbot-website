@@ -1,10 +1,21 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import WebsiteSetting from '../../component/Tab Panel/WebsiteSetting'
 import QAPanel from '../../component/Tab Panel/QAPanel'
 import WebsiteScraping from '../../component/Tab Panel/WebsiteScraping'
+import { useNavigate } from 'react-router-dom'
 
 const Chatbot = () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    const isLogin = localStorage.getItem('isLoginVerified')
+
+    if (isLogin === 'false' || isLogin == null) {
+      navigate('/login')
+    }
+
+  }, [])
+
   return (
     <>
       <Tabs isFitted variant='unstyled' colorScheme='purple' >

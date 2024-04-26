@@ -13,7 +13,7 @@ const QAPanel = () => {
   const getAllQA = async () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
-      const { data } = await axios.get('/chatbot/question', {
+      const { data } = await axios.get('https://chatbot-website.onrender.com/api/v1/chatbot/question', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -37,7 +37,7 @@ const QAPanel = () => {
       const formdata = new FormData()
       formdata.append('id', id)
 
-      await axios.post('/chatbot/question', formdata, {
+      await axios.post('https://chatbot-website.onrender.com/api/v1/chatbot/question', formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -62,7 +62,10 @@ const QAPanel = () => {
   }
 
   useEffect(() => {
-    getAllQA()
+    const user = JSON.parse(localStorage.getItem('user'))
+    if (user) {
+      getAllQA()
+    }
   }, [])
 
   return (
@@ -76,7 +79,7 @@ const QAPanel = () => {
               <AddQA getAllQA={getAllQA} />
               <ExcelQA getAllQA={getAllQA} />
             </Flex>
-            <Box w={['280px', '400px','500px', '750px']}>
+            <Box w={['280px', '400px', '500px', '750px']}>
               <QaTable handleDelete={handleDelete} getAllQA={getAllQA} qaArray={qaArray} />
             </Box>
           </VStack>

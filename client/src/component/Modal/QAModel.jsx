@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spinner, Textarea, useDisclosure, useToast } from '@chakra-ui/react'
+import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spinner, Textarea, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -28,7 +28,7 @@ const QAModel = ({ isOpen, onClose, getAllQA }) => {
             formdata.append('question', question)
             formdata.append('answer', answer)
 
-            await axios.put(`/chatbot/question/${dataId}`, formdata, {
+            await axios.put(`https://chatbot-website.onrender.com/api/v1/chatbot/question/${dataId}`, formdata, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

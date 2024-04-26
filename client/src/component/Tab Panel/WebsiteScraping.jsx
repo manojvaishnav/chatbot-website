@@ -42,7 +42,7 @@ const WebsiteScraping = () => {
       const formdata = new FormData()
       formdata.append('url', website)
 
-      const { data } = await axios.post('/website', formdata, {
+      const { data } = await axios.post('https://chatbot-website.onrender.com/api/v1/website', formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -72,7 +72,7 @@ const WebsiteScraping = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
 
-      const { data } = await axios.get('/website', {
+      const { data } = await axios.get('https://chatbot-website.onrender.com/api/v1/website', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -97,7 +97,7 @@ const WebsiteScraping = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
 
-      await axios.delete(`/website/${id}`, {
+      await axios.delete(`https://chatbot-website.onrender.com/api/v1/website/${id}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -126,7 +126,7 @@ const WebsiteScraping = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'))
 
-      await axios.delete(`/website/`, {
+      await axios.delete(`https://chatbot-website.onrender.com/api/v1/website/`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -153,7 +153,10 @@ const WebsiteScraping = () => {
   }
 
   useEffect(() => {
-    getWebsiteData()
+    const user = JSON.parse(localStorage.getItem('user'))
+    if (user) {
+      getWebsiteData()
+    }
   }, [])
 
   return (
@@ -199,7 +202,7 @@ const WebsiteScraping = () => {
                               Submit Scan Request
                             </Button>
                             {
-                              webData!==null ? <>
+                              webData !== null ? <>
                                 <Button
                                   bg="red.400"
                                   color="white"

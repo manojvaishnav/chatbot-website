@@ -12,8 +12,7 @@ import {
   useColorModeValue,
   Textarea,
   useToast,
-  Spinner,
-  HStack
+  Spinner
 } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
@@ -49,7 +48,7 @@ const WebsiteSetting = () => {
       formdata.append('description', desc)
       formdata.append('website', website)
 
-      await axios.post('/company', formdata, {
+      await axios.post('https://chatbot-website.onrender.com/api/v1/company', formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -77,29 +76,31 @@ const WebsiteSetting = () => {
 
   const getCompanyDetail = async () => {
     setIsLoading(true)
-    try {
-      const user = JSON.parse(localStorage.getItem('user'))
+    const user = JSON.parse(localStorage.getItem('user'))
+    if (user) {
+      try {
 
-      const { data } = await axios.get('/company', {
-        headers: {
-          'Authorization': `Bearer ${user.token}`
+        const { data } = await axios.get('https://chatbot-website.onrender.com/api/v1/company', {
+          headers: {
+            'Authorization': `Bearer ${user.token}`
+          }
+        })
+        if (data.data) {
+          setCompName(data.data.name)
+          setDesc(data.data.description)
+          setWebsite(data.data.website)
+          setCmpId(data.data._id)
+          setIsData(true)
         }
-      })
-      if (data.data) {
-        setCompName(data.data.name)
-        setDesc(data.data.description)
-        setWebsite(data.data.website)
-        setCmpId(data.data._id)
-        setIsData(true)
+      } catch (error) {
+        toast({
+          title: error.response.data.error,
+          status: 'error',
+          duration: 3000,
+          position: 'top',
+          isClosable: true,
+        })
       }
-    } catch (error) {
-      toast({
-        title: error.response.data.error,
-        status: 'error',
-        duration: 3000,
-        position: 'top',
-        isClosable: true,
-      })
     }
     setIsLoading(false)
   }
@@ -123,7 +124,7 @@ const WebsiteSetting = () => {
       formdata.append('description', desc)
       formdata.append('website', website)
 
-      await axios.put(`/company/${id}`, formdata, {
+      await axios.put(`https://chatbot-website.onrender.com/api/v1/company/${id}`, formdata, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

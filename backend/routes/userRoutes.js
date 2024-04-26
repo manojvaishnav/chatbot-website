@@ -6,4 +6,5 @@ router.post('/register', registerUser)
 router.post('/login', loginUser)
 router.post('/verify-token', checkLogin)
 
+
 module.exports = router

@@ -1,10 +1,12 @@
 import { Box, Card, CardBody, Center, Stack, StackDivider, Text, } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import CopyCard from '../../component/CopyCard'
+import { useNavigate } from 'react-router-dom'
 
 const CodePage = () => {
 
   const [chatId, setChatId] = useState("")
+  const navigate = useNavigate()
 
   const data = [
     {
@@ -26,8 +28,17 @@ const CodePage = () => {
   ]
 
   useEffect(() => {
+    const isLogin = localStorage.getItem('isLoginVerified')
+
+    if (isLogin === 'false' || isLogin == null) {
+      navigate('/login')
+    }
+
     const user = JSON.parse(localStorage.getItem('user'))
-    setChatId(user.chatbotId)
+    if (user) {
+      setChatId(user.chatbotId)
+    }
+
   }, [])
 
   return (
@@ -45,7 +56,7 @@ const CodePage = () => {
             <CardBody>
               <Stack divider={<StackDivider />} spacing='4'>
                 {
-                  data?.map((data,i) => <CopyCard key={i} data={data} />)
+                  data?.map((data, i) => <CopyCard key={i} data={data} />)
                 }
               </Stack>
             </CardBody>

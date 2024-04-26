@@ -7,7 +7,6 @@ import {
   Stack,
   Button,
   Heading,
-  useColorModeValue,
   VStack,
   Center,
   InputGroup,
@@ -49,7 +48,7 @@ const Register = () => {
       formdata.append('email', email)
       formdata.append('password', password)
 
-      const { data } = await axios.post(`/auth/register`, formdata)
+      const { data } = await axios.post(`https://chatbot-website.onrender.com/api/v1/auth/register`, formdata)
 
       toast({
         title: 'Login successfull',
@@ -60,10 +59,9 @@ const Register = () => {
       })
 
       localStorage.setItem('user', JSON.stringify(data.user))
+      localStorage.setItem('isLoginVerified', true)
 
-      setTimeout(() => {
-        navigate('/dashboard')
-      }, 500)
+      navigate('/dashboard')
 
     } catch (error) {
       toast({

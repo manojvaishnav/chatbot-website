@@ -29,7 +29,7 @@ const AddQA = ({ getAllQA }) => {
             formdata.append('question', question)
             formdata.append('answer', answer)
 
-            await axios.post(`/chatbot/upload/question`, formdata, {
+            await axios.post(`https://chatbot-website.onrender.com/api/v1/chatbot/upload/question`, formdata, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

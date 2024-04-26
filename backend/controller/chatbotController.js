@@ -59,9 +59,9 @@ module.exports.trainQuestionData = async (req, res) => {
 
         const newData = [addIntent(question, answer)]
 
-        await updateData(newData, user.botId)
+        const arr = await Chatbot.findByIdAndUpdate({ _id: user.botId }, { $push: { data: newData } }, { new: true })
 
-        await Chatbot.findByIdAndUpdate({ _id: user.botId }, { $push: { data: newData } })
+        await TrainModel(user.botId, arr.data)
 
         res.status(200).json({ message: "Model Updated and Saved Successfully" })
     } catch (error) {
@@ -101,6 +101,7 @@ module.exports.trainExcelData = async (req, res) => {
         console.log(error)
         res.status(500).json({ success: false, message: "Internal server error" })
     }
+
 }
 
 // ------------------------ GET ALL QA'S ----------------------------------
@@ -141,11 +142,12 @@ module.exports.deleteQA = async (req, res) => {
             { new: true }
         );
 
-        const arr = await Chatbot.findOne({ _id: user.botId })
 
         const modelPath = path.join(__dirname, `../uploads/trained_model/${user.botId}.nlp`);
 
         await deleteTempFile(modelPath)
+
+        const arr = await Chatbot.findOne({ _id: user.botId })
 
         await TrainModel(user.botId, arr.data)
 
@@ -182,17 +184,34 @@ module.exports.updateQA = async (req, res) => {
             { new: true }
         );
 
-        const arr = await Chatbot.findOne({ _id: user.botId })
-
         const modelPath = path.join(__dirname, `../uploads/trained_model/${user.botId}.nlp`);
-
         await deleteTempFile(modelPath)
 
+        const arr = await Chatbot.findOne({ _id: user.botId })
         await TrainModel(user.botId, arr.data)
 
-        res.status(200).json({ message: "Question updated successfully", updatedChatbot })
+        res.status(200).json({ message: "Question updated successfully", updatedChatbot, data: arr.data })
     } catch (error) {
         console.log(error)
         res.status(500).json({ success: false, message: "Internal server error" })
     }
 }
+
+// module.exports.trainChatbotModel = async (req,res) => {
+//     try {
+//         const user = req.user
+
+//         const modelPath = path.join(__dirname, `../uploads/trained_model/${user.botId}.nlp`);
+
+//         await deleteTempFile(modelPath)
+
+//         const arr = await Chatbot.findById({ _id: user.botId })
+
+//         await TrainModel(user.botId, arr.data)
+
+//         res.status(200).json({ message: "Model Trained Successfully" })
+//     } catch (error) {
+//         console.log(error)
+//         res.status(500).json({ success: false, message: "Internal server error" })
+//     }
+// }

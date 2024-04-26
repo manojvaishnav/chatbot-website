@@ -40,7 +40,7 @@ const ExcelQA = ({ getAllQA }) => {
             formdata.append('file', file[0])
             const user = JSON.parse(localStorage.getItem('user'))
 
-            await axios.post('/chatbot/upload/file', formdata, {
+            await axios.post('https://chatbot-website.onrender.com/api/v1/chatbot/upload/file', formdata, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

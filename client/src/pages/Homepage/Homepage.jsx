@@ -5,34 +5,19 @@ import Navbar from '../../component/Navbar'
 import Hero2 from '../../component/Homepage/Hero2'
 import Footer from '../../component/Footer'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
 
 const Homepage = () => {
   const navigate = useNavigate()
 
-  const check = async () => {
-    const user = JSON.parse(localStorage.getItem('user'))
-    if (!user?.token) {
-      navigate('/')
-    }
-    try {
-      const formdata = new FormData()
-      formdata.append('token', user.token)
-
-      const { data } = await axios.post('/auth/verify-token', formdata)
-
-      if (data.success && data.login) {
-        navigate('/dashboard')
-      }
-
-    } catch (error) {
-      navigate('/')
-    }
-  }
-
   useEffect(() => {
-    check()
-  }, [])
+    const isLogin = localStorage.getItem('isLoginVerified')
+    const isUser = localStorage.getItem('user')
+
+    if (isLogin === 'true' && isUser != null) {
+      navigate('/dashboard')
+    }
+  })
+
   return (
     <>
       <VStack w={'full'}>

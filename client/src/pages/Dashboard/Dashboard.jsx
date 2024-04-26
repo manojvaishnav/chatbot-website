@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Stack, Box, Button, useColorModeValue, Text } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { BsDiscord } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const isLogin = localStorage.getItem('isLoginVerified')
+
+        if (isLogin === 'false' || isLogin == null) {
+            navigate('/login')
+        }
+        
+    }, [])
+
     return (
         <>
             <Box pb={8}>

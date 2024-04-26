@@ -2,12 +2,10 @@
 
 import {
   IconButton,
-  Avatar,
   Box,
   CloseButton,
   Flex,
   HStack,
-  VStack,
   Icon,
   useColorModeValue,
   Text,
@@ -134,6 +132,7 @@ const Sidebar = ({ content }) => {
 
   const handlelogout = () => {
     localStorage.removeItem('user')
+    localStorage.removeItem('isLoginVerified')
     navigate('/')
   }
 

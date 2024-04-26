@@ -1,6 +1,6 @@
 const { NlpManager } = require('node-nlp');
 const path = require('path')
-const manager = new NlpManager({ languages: ['en'], autoSave:false });
+const manager = new NlpManager({ languages: ['en'], autoSave:false, });
 
 module.exports.TrainModel = async (chatId, data) => {
 
@@ -14,5 +14,4 @@ module.exports.TrainModel = async (chatId, data) => {
     const modelPath = path.join(__dirname, `../uploads/trained_model/${chatId}.nlp`);
 
     await manager.save(modelPath);
-
 }

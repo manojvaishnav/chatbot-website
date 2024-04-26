@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const jwt_secret_key = process.env.JWT_SECRET_KEY
 const greetingData = require('../uploads/training_data/greeting_data')
 const { assignToken } = require('../utills/generateToken')
-const { TrainModel } = require('../middleware/trainModel')
+const { TrainModel } = require('../middleware/trainModel');
 
 // ------------------------ USER REGISTERATION ----------------------------------
 module.exports.registerUser = async (req, res) => {

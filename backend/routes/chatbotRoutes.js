@@ -6,6 +6,7 @@ const { requireLogin } = require('../middleware/requireLogin')
 // Model Train
 router.post('/upload/question', requireLogin, trainQuestionData)
 router.post('/upload/file', requireLogin, trainExcelData)
+// router.post('/train/', requireLogin, trainChatbotModel)
 
 // Public Chat Api
 router.post('/chat', chatWithBot)
