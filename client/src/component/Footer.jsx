@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaEnvelope, FaLinkedin, FaGithub, FaFirefoxBrowser } from 'react-icons/fa'
 
 const SocialButton = ({
   children,
@@ -39,6 +39,9 @@ const SocialButton = ({
 }
 
 export default function Footer() {
+
+  const date = new Date()
+
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -52,16 +55,16 @@ export default function Footer() {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <Text>© 2024 Bot Creator. All rights reserved</Text>
+        <Text>© {date.getFullYear()} Bot Creator. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
+          <SocialButton label={'Github'} href={'https://github.com/manojvaishnav'}>
+            <FaGithub />
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
+          <SocialButton label={'Email'} href={'https://mkvaishnav.netlify.app/'}>
+            <FaFirefoxBrowser />
           </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
+          <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/in/manoj-vaishnav/'}>
+            <FaLinkedin />
           </SocialButton>
         </Stack>
       </Container>
